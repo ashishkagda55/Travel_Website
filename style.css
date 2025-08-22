@@ -1,0 +1,209 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top Offer */
+.top-offer {
+  background: linear-gradient(to right, #9eff9d, #9dffe1);
+  color: #000;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn-nav {
+  background: linear-gradient(to right, #00ff84, #65ffa1);
+  padding: 10px 20px;
+  color: #000;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-nav:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background: #f9fdfd;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #12344d;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-img img {
+  width: 450px;
+}
+
+/* Activity Cards */
+.activity-cards {
+  display: flex;
+  gap: 25px;
+}
+
+.card {
+  width: 180px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+  padding: 15px;
+  color: #12344d;
+  font-weight: 600;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Different card colors */
+.card.yellow { background: #ecffb4; }
+.card.blue { background: #2bb5c0; color: #fff; }
+.card.blue p { color: #e0fdfd; }
+.card.lime { background: #e4f88b; }
+
+/* Packages */
+.packages {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.packages h2 {
+  font-size: 2rem;
+  color: #1a2b49;
+  margin-bottom: 10px;
+}
+
+.packages p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.package-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.package {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.package img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.package h3 {
+  font-size: 1rem;
+  color: #1a2b49;
+  margin: 15px;
+}
+
+.package p {
+  margin: 0 15px 10px 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.package .price {
+  font-weight: bold;
+  color: #000;
+  margin: 0 15px 15px 15px;
+}
+
+.package .btn {
+  display: block;
+  margin: 0 15px;
+  padding: 10px 20px;
+  background: #1a2b49;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.package .btn:hover {
+  background: #000;
+}
