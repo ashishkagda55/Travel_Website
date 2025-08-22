@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travila - Vacation</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
   <!-- Top Offer Bar -->
@@ -37,17 +37,17 @@
       <!-- Activities Section -->
       <div class="activity-cards">
         <div class="card yellow">
-          <img src="image3.png" alt="Beach Walking">
+          <img src="beach.png" alt="Beach Walking">
           <h4>Beach Walking</h4>
           <p><i class="fa fa-user-friends"></i> 60 people going</p>
         </div>
         <div class="card blue">
-          <img src="image2.png" alt="Water Surfing">
+          <img src="Water_Surfing.png" alt="Water Surfing">
           <h4>Water Surfing</h4>
           <p><i class="fa fa-user-friends"></i> 12 people going</p>
         </div>
         <div class="card lime">
-          <img src="image4.png" alt="Kayaking">
+          <img src="Kayaking.png" alt="Kayaking">
           <h4>Kayaking</h4>
           <p><i class="fa fa-user-friends"></i> 31 people going</p>
         </div>
@@ -58,42 +58,125 @@
     </div>
   </section>
 
-  <!-- Packages Section -->
+  <!-- Packages Section (PIXEL-MATCHED SLIDER) -->
   <section class="packages">
-    <h2>Your Journey, Your Way</h2>
-    <p>Discover the World’s Treasures with Travila</p>
+    <div class="packages-head">
+      <div class="ph-left">
+        <h2>Your Journey, Your Way</h2>
+        <p>Discover the World's Treasures with Travila</p>
+      </div>
+      <div class="slider-controls">
+        <button class="arrow prev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="arrow next" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
 
     <div class="package-list">
-      <div class="package">
-        <img src="cruise.jpg" alt="Cruise">
-        <div class="tag">Exceptional</div>
-        <h3>California Sunset/Twilight Boat Cruise</h3>
-        <p>7 days 6 nights - Small group</p>
-        <div class="price">$35.62 / person</div>
-        <button class="btn">Book Now</button>
-      </div>
-      <div class="package">
-        <img src="villa.jpg" alt="Villa">
-        <h3>California Sunset/Twilight Boat Cruise</h3>
-        <p>2 days 1 nights - Family</p>
-        <div class="price">$48.25 / person</div>
-        <button class="btn">Book Now</button>
-      </div>
-      <div class="package">
-        <img src="nyc.jpg" alt="NYC">
-        <h3>NYC: Food Tastings and Culture Tour</h3>
-        <p>3 days 3 nights - Company</p>
-        <div class="price">$17.32 / person</div>
-        <button class="btn">Book Now</button>
-      </div>
-      <div class="package">
-        <img src="canyon.jpg" alt="Canyon">
-        <h3>Grand Canyon Horseshoe Bend 2 days</h3>
-        <p>7 days 6 nights - Small group</p>
-        <div class="price">$15.63 / person</div>
-        <button class="btn">Book Now</button>
+      <div class="slider-track" id="tripTrack">
+        <!-- Card 1 -->
+        <article class="trip-card">
+          <figure class="thumb">
+            <img src="journey1.png" alt="California Sunset/Twilight Boat Cruise">
+            <button class="wish" aria-label="Save"><i class="fa-regular fa-heart"></i></button>
+            <span class="tag-badge"><i class="fa-solid fa-bolt"></i> Exceptional</span>
+            <span class="rating-pill"><i class="fa-solid fa-star"></i> 5.00</span>
+          </figure>
+
+          <div class="card-body">
+            <h3>California Sunset/Twilight Boat Cruise</h3>
+            <p class="meta">7 days 6 nights - Small group</p>
+
+            <div class="promo">
+              <div class="promo-title">Promotion will end in</div>
+              <div class="timer">
+                <div class="tbox"><strong>228</strong><span>Days</span></div>
+                <div class="tbox"><strong>09</strong><span>Hours</span></div>
+                <div class="tbox"><strong>50</strong><span>Mins</span></div>
+                <div class="tbox"><strong>44</strong><span>Secs</span></div>
+              </div>
+            </div>
+
+            <div class="price-row">
+              <div class="price"><span>$35.62</span> <em>/ person</em></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="trip-card">
+          <figure class="thumb">
+            <img src="journey2.png" alt="California Sunset/Twilight Boat Cruise">
+            <button class="wish" aria-label="Save"><i class="fa-regular fa-heart"></i></button>
+            <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.96 <em>(672 reviews)</em></span>
+          </figure>
+
+          <div class="card-body">
+            <h3>California Sunset/Twilight Boat Cruise</h3>
+            <p class="meta">2 days 3 nights - Family</p>
+
+            <div class="price-row">
+              <div class="price"><span>$48.25</span> <em>/ person</em></div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="trip-card">
+          <figure class="thumb">
+            <img src="journey3.png" alt="NYC: Food Tastings and Culture Tour">
+            <button class="wish" aria-label="Save"><i class="fa-regular fa-heart"></i></button>
+            <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.96 <em>(672 reviews)</em></span>
+          </figure>
+
+          <div class="card-body">
+            <h3>NYC: Food Tastings and Culture Tour</h3>
+            <p class="meta">3 days 3 nights - Company</p>
+
+            <div class="price-row">
+              <div class="price"><span>$17.32</span> <em>/ person</em></div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="trip-card">
+          <figure class="thumb">
+            <img src="journey4.png" alt="Grand Canyon Horseshoe Bend 2 days">
+            <button class="wish" aria-label="Save"><i class="fa-regular fa-heart"></i></button>
+            <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.96 <em>(672 reviews)</em></span>
+          </figure>
+
+          <div class="card-body">
+            <h3>Grand Canyon Horseshoe Bend 2 days</h3>
+            <p class="meta">7 days 6 nights - Small group</p>
+
+            <div class="price-row">
+              <div class="price"><span>$15.63</span> <em>/ person</em></div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
+
+  <script>
+    // simple slider scroll
+    const track = document.getElementById('tripTrack');
+    const prev = document.querySelector('.arrow.prev');
+    const next = document.querySelector('.arrow.next');
+
+    function cardWidth() {
+      const card = track.querySelector('.trip-card');
+      const style = window.getComputedStyle(card);
+      const gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 32);
+      return card.offsetWidth + gap;
+    }
+
+    prev.addEventListener('click', () => track.scrollBy({ left: -cardWidth(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: cardWidth(),  behavior: 'smooth' }));
+  </script>
 </body>
 </html>

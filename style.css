@@ -135,16 +135,19 @@ body {
 .card.blue p { color: #e0fdfd; }
 .card.lime { background: #e4f88b; }
 
-/* Packages */
+/* =========================
+   Packages (Slider Section)
+   ========================= */
 .packages {
   padding: 60px 80px;
-  text-align: center;
+  position: relative;
 }
 
 .packages h2 {
-  font-size: 2rem;
-  color: #1a2b49;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #12344d;
+  margin-bottom: 8px;
 }
 
 .packages p {
@@ -153,57 +156,267 @@ body {
 }
 
 .package-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 15px;
+}
+
+.package-list::-webkit-scrollbar {
+  display: none;
 }
 
 .package {
+  min-width: 300px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   overflow: hidden;
-  padding-bottom: 20px;
-  text-align: left;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .package img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.package h3 {
+/* Heart Icon */
+.package .heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Tag */
+.package .tag {
+  position: absolute;
+  top: 170px;
+  left: 15px;
+  background: #ffef60;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Rating */
+.package .rating {
+  position: absolute;
+  top: 170px;
+  right: 15px;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Content */
+.package-content {
+  padding: 20px;
+}
+
+.package-content h3 {
   font-size: 1rem;
+  font-weight: 700;
   color: #1a2b49;
-  margin: 15px;
+  margin-bottom: 6px;
 }
 
-.package p {
-  margin: 0 15px 10px 15px;
+.package-content p {
   font-size: 0.9rem;
   color: #666;
+  margin-bottom: 12px;
 }
 
-.package .price {
+.package-content .price {
   font-weight: bold;
   color: #000;
-  margin: 0 15px 15px 15px;
+  margin-bottom: 15px;
 }
 
-.package .btn {
-  display: block;
-  margin: 0 15px;
-  padding: 10px 20px;
+.package-content .btn {
+  display: inline-block;
+  padding: 8px 18px;
   background: #1a2b49;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 0.9rem;
   font-weight: 600;
   transition: 0.3s;
 }
 
-.package .btn:hover {
+.package-content .btn:hover {
   background: #000;
+}
+
+/* Slider Arrows */
+.slider-controls {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  display: flex;
+  gap: 10px;
+}
+
+.slider-controls button {
+  background: #eaf6ff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.slider-controls button:hover {
+  background: #d0ebff;
+}
+
+/* =========================
+   Journey Section (NEW)
+   ========================= */
+.journey-section {
+  padding: 60px 100px;
+  background: #f9fcff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.journey-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a2b49;
+  margin-bottom: 8px;
+}
+
+.journey-section p {
+  font-size: 16px;
+  color: #6b7a99;
+  margin-bottom: 30px;
+}
+
+/* Card Container */
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card Styling */
+.journey-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.journey-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card Content */
+.journey-card-content {
+  padding: 15px;
+}
+
+.journey-card-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2b49;
+  margin: 10px 0;
+}
+
+.journey-card-content p {
+  font-size: 14px;
+  color: #6b7a99;
+  margin: 4px 0 12px;
+}
+
+/* Price & Button Row */
+.journey-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.journey-footer .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2b49;
+}
+
+.journey-footer button {
+  padding: 8px 16px;
+  background: #00b16a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.journey-footer button:hover {
+  background: #00995c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .journey-section {
+    padding: 40px 20px;
+  }
+
+  .journey-section h2 {
+    font-size: 26px;
+  }
+
+  .journey-card img {
+    height: 150px;
+  }
 }
